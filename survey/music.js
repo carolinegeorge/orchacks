@@ -1,3 +1,36 @@
+var dict = [{name: "Four Seasons",
+composer: "Antonio Vivaldi's", 
+era: "Baroque",
+mood: "Happy",
+known: "Yes",
+soloist: "No"},
+{name: "5th Symphony",
+composer: "Ludwig van Beethoven",
+era: "Classical",
+mood: "Assertive",
+known: "Yes",
+soloist: "No"},
+{name: "Sinfonia in D major",
+composer: "Johann Christian Bach",
+era: "Baroque",
+mood: "Sad",
+known: "No",
+soloist: "No"}]
+
+var userInputQ1 = [];
+var userInputQ2 = [];
+var userInputQ3 = [];
+var userInputQ4 = [];
+var userInputQ5 = [];
+var results = [];
+
+var inputCounter = 0;
+var resultCounter = 0;
+var unknownPiece = false;
+var soloistAvail = false;
+
+
+
 // Question 1 
 
 var bar = false;
@@ -80,6 +113,42 @@ function setAne() {
     ane = true;
 }
 
+//if the user chooses baroque, set the input as Baroque, etc: Q1
+if(bar) { 
+    userInputQ1[inputCounter] = "Baroque";
+    inputCounter++;
+}
+
+if(clas) {
+    userInputQ1[inputCounter] = "Classical";
+    inputCounter++;
+}
+
+if(rom) {
+    userInputQ1[inputCounter] = "Romantic";
+    inputCounter++;
+}
+
+if(imp) {
+    userInputQ1[inputCounter] = "Impressionist";
+    inputCounter++;
+}
+
+if(twnc) {
+    userInputQ1[inputCounter] = "20th Century";
+    inputCounter++;
+}
+
+if(snd) {
+    userInputQ1[inputCounter] = "Soundtrack";
+    inputCounter++;
+}
+
+if(ane) {
+    userInputQ1[inputCounter] = "Any";
+    inputCounter++;
+}
+
 // Question 2
 
 var stormy = false;
@@ -128,73 +197,7 @@ function setAbstract() {
     abstract = false;
 }
 
-var dict = [{name: "Four Seasons",
-composer: "Antonio Vivaldi's", 
-era: "Baroque",
-mood: "Happy",
-known: "Yes",
-soloist: "No"},
-{name: "5th Symphony",
-composer: "Ludwig van Beethoven",
-era: "Classical",
-mood: "Assertive",
-known: "Yes",
-soloist: "No"},
-{name: "Sinfonia in D major",
-composer: "Johann Christian Bach",
-era: "Baroque",
-mood: "Sad",
-known: "No",
-soloist: "No"}]
 
-var userInputQ1 = [];
-var userInputQ2 = [];
-var userInputQ3 = [];
-var userInputQ4 = [];
-var userInputQ5 = [];
-var results = [];
-
-var inputCounter = 0;
-var resultCounter = 0;
-var unknownPiece = false;
-var soloistAvail = false;
-
-
-//if the user chooses baroque, set the input as Baroque, etc: Q1
-if(bar) { 
-    userInputQ1[inputCounter] = "Baroque";
-    inputCounter++;
-}
-
-if(clas) {
-    userInputQ1[inputCounter] = "Classical";
-    inputCounter++;
-}
-
-if(rom) {
-    userInputQ1[inputCounter] = "Romantic";
-    inputCounter++;
-}
-
-if(imp) {
-    userInputQ1[inputCounter] = "Impressionist";
-    inputCounter++;
-}
-
-if(twnc) {
-    userInputQ1[inputCounter] = "20th Century";
-    inputCounter++;
-}
-
-if(snd) {
-    userInputQ1[inputCounter] = "Soundtrack";
-    inputCounter++;
-}
-
-if(ane) {
-    userInputQ1[inputCounter] = "Any";
-    inputCounter++;
-}
 
 // if the user chooses moods, sets input as happy, etc 
 if(stormy) {

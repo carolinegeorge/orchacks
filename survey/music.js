@@ -1,15 +1,21 @@
 var dict = [{name: "Four Seasons",
 composer: "Antonio Vivaldi's", 
-era: "Baroque"
-mood: "Happy"},
+era: "Baroque",
+mood: "Happy",
+known: "Yes",
+soloist: "No"},
 {name: "5th Symphony",
 composer: "Ludwig van Beethoven",
 era: "Classical",
-mood: "Assertive"},
-{name: "Symphony in D major",
+mood: "Assertive",
+known: "Yes",
+soloist: "No"},
+{name: "Sinfonia in D major",
 composer: "Johann Christian Bach",
 era: "Baroque",
-mood: "Sad"}]
+mood: "Sad",
+known: "No",
+soloist: "No"}]
 
 var userInputQ1 = [];
 var userInputQ2 = [];
@@ -20,9 +26,11 @@ var results = [];
 
 var inputCounter = 0;
 var resultCounter = 0;
+var unknownPiece = false;
+var soloistAvail = false;
 
 
-//if the user chooses baroque, set the input as Baroque, etc
+//if the user chooses baroque, set the input as Baroque, etc: Q1
 if(bar) { 
     userInputQ1[inputCounter] = "Baroque";
     inputCounter++;
@@ -58,8 +66,11 @@ if(ane) {
     inputCounter++;
 }
 
+// if the user chooses moods, sets input as happy, etc 
+if(stormy) {
+    userInputQ2[inputCounter] = "stormy";
+    inputCounter++
 
-    
 
 // goes through q1 and looks for era
 for(var i = 0; i < userInputQ1.length; i++){
@@ -102,12 +113,17 @@ for(var i = 0; i < userInputQ4.length; i++){
 }
 
 // goes through q5 and fnds Y/N/No pref
-for(var i = 0; i < userInputQ4.length; i++){
+for(var i = 0; i < userInputQ5.length; i++){
   for(var q = 0; q < dict.length; q++){
-    if(dict[q].era === userInputQ4[i]){
-      results[resultCounter] = dict[q];
+    if(userInputQ5[i] == "No" || ){
+    // don't do anything: keep it false
       resultCounter++;
     }
+    else if(userInputQ5[i] == "Yes") { 
+        soloistAvail = true;
+        resultCounter++;
+    }
+    else { 
   }
 }
 

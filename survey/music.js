@@ -1,13 +1,17 @@
 var dict = [{name: "Four Seasons",
-composer: "Antonio Vivaldi's"},
+composer: "Antonio Vivaldi's",
+era: "Baroque",
+mood: "Angry"},
 {name: "5th Symphony",
 composer: "Beethoven"
 era: "Classical",
 mood: "Assertive"},
 {name: "Symphony in D major",
 composer: "Johann Christian Bach",
-era: "Buroque",
-mood: "Sad"}}
+era: "Baroque",
+mood: "Sad"},
+{name: "Eine kleine nachmusik",
+composer: "Wolgang Amadeus Mozart 
 
 var userInputQ1 = [];
 var userInputQ2 = [];

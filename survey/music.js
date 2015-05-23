@@ -9,9 +9,11 @@ mood: "Assertive"},
 {name: "Symphony in D major",
 composer: "Johann Christian Bach",
 era: "Baroque",
+<<<<<<< HEAD
 mood: "Sad"},
 {name: "Eine kleine nachmusik",
 composer: "Wolgang Amadeus Mozart 
+mood: "Sad"}}
 
 var userInputQ1 = [];
 var userInputQ2 = [];

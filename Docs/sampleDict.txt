@@ -1,0 +1,26 @@
+Symphony: Beethoven's 5th Symphony
+Composer: Beethoven
+Movement: First, Allegro Con Brio
+Date: December 22, 1808
+Mood: Energetic
+Era: Classical
+
+Symphony: Beethoven's 5th Symphony
+Composer: Beethoven
+Movement: Second, Andante con moto
+Year: 1808
+Mood: Assertive
+Era: Classical
+
+Symphony: Symphony in D major
+Composer: Johann Christian Bach
+Movement: Allegro di molto
+Year: 1775
+Mood: Sad
+Era: Buroque
+
+
+
+
+
+

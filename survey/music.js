@@ -113,41 +113,7 @@ function setAne() {
     ane = true;
 }
 
-//if the user chooses baroque, set the input as Baroque, etc: Q1
-if(bar) { 
-    userInputQ1[inputCounter] = "Baroque";
-    inputCounter++;
-}
 
-if(clas) {
-    userInputQ1[inputCounter] = "Classical";
-    inputCounter++;
-}
-
-if(rom) {
-    userInputQ1[inputCounter] = "Romantic";
-    inputCounter++;
-}
-
-if(imp) {
-    userInputQ1[inputCounter] = "Impressionist";
-    inputCounter++;
-}
-
-if(twnc) {
-    userInputQ1[inputCounter] = "20th Century";
-    inputCounter++;
-}
-
-if(snd) {
-    userInputQ1[inputCounter] = "Soundtrack";
-    inputCounter++;
-}
-
-if(ane) {
-    userInputQ1[inputCounter] = "Any";
-    inputCounter++;
-}
 
 // Question 2
 
@@ -206,6 +172,45 @@ if(stormy) {
     userInputQ2[inputCounter] = "stormy";
     inputCounter++
 
+
+
+//if the user chooses baroque, set the input as Baroque, etc: All Question
+function submitStuff(){
+    if(bar) { 
+        userInputQ1[inputCounter] = "Baroque";
+        inputCounter++;
+    }
+
+    if(clas) {
+        userInputQ1[inputCounter] = "Classical";
+        inputCounter++;
+    }
+
+    if(rom) {
+        userInputQ1[inputCounter] = "Romantic";
+        inputCounter++;
+    }
+
+    if(imp) {
+        userInputQ1[inputCounter] = "Impressionist";
+        inputCounter++;
+    }
+
+    if(twnc) {
+        userInputQ1[inputCounter] = "20th Century";
+        inputCounter++;
+    }
+
+    if(snd) {
+        userInputQ1[inputCounter] = "Soundtrack";
+        inputCounter++;
+    }
+
+    if(ane) {
+        userInputQ1[inputCounter] = "Any";
+        inputCounter++;
+    }
+}
 
 // goes through q1 and looks for era
 for(var i = 0; i < userInputQ1.length; i++){

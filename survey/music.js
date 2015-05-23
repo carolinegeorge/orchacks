@@ -66,6 +66,8 @@ if(ane) {
     inputCounter++;
 }
 
+
+
 // if the user chooses moods, sets input as happy, etc 
 if(stormy) {
     userInputQ2[inputCounter] = "stormy";

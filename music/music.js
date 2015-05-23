@@ -1,5 +1,3 @@
-Tasks = new Mongo.Collection("tasks");
-
 if (Meteor.isClient) {
   // counter starts at 0
   Session.setDefault('counter', 0);
@@ -10,13 +8,6 @@ if (Meteor.isClient) {
   Template.hello.helpers({
     
   });
-  /*function search(nameKey, myArray){
-    for (var i=0; i < myArray.length; i++) {
-        if (myArray[i]. === nameKey) {
-            return myArray[i];
-        }
-    }
-}*/
   Template.resultSubmit.events({
     "submit": function() {
       var date = "2015";
@@ -33,12 +24,6 @@ if (Meteor.isClient) {
         }
       }
     }
-  });
-  
-  Template.body.helpers ({
-     tasks: function () { 
-        return Tasks.find({});
-     }
   });
 }
 

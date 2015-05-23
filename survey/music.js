@@ -6,7 +6,7 @@ era: "Classical",
 mood: "Assertive"},
 {name: "Symphony in D major",
 composer: "Johann Christian Bach",
-era: "Buroque",
+era: "Baroque",
 mood: "Sad"}}
 
 var userInputQ1 = [];

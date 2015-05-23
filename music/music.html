@@ -1,21 +1,16 @@
 <head>
-  <title>Survey-Homepage</title>
+  <title>simple-todos</title>
 </head>
 
 <body>
-<<<<<<< HEAD
   <h1>Are you a newbie?</h1>
   <h1>Too many choices?</h1>
+  <h1>Let us help you choose based on your preferences!</h1>
 
   {{> hello}}
-=======
-  <div id="landing-div">
-    <h1>Orchestra Survey</h1>
-    <h3>Take this survey and let us help you choose based on your preferences!</h3>
-    <p> <a href="surveytemplate.htm" target="_self">Take the survey</a> </p>
-    <img src="/img/kws-logo.jpg">
-  </div>
->>>>>>> 95e6df30aa75d9606fe09477e57535b2f46825f6
 </body>
 
-
+<template name="hello">
+  <button>Click Me</button>
+  <p>You've pressed the button {{counter}} times.</p>
+</template>

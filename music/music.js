@@ -1,3 +1,5 @@
+Tasks = new Mongo.Collection("tasks");
+
 if (Meteor.isClient) {
   // counter starts at 0
   Session.setDefault('counter', 0);
@@ -31,6 +33,12 @@ if (Meteor.isClient) {
         }
       }
     }
+  });
+  
+  Template.body.helpers ({
+     tasks: function () { 
+        return Tasks.find({});
+     }
   });
 }
 

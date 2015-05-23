@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <!-- Template for survey questions -->
@@ -27,35 +28,36 @@
 
   <div id= "head2"> 
     <h1> Music selection survey <h1>
-    <div id="header-logo"> 
-      <img src="/music/img/kws_logo_block70.jpg" >
+     <img src="img/kws_logo_block70.jpg" align="right">
     </div>
   </div>
 <div id="innerbody">
 <br> 
 <br>
-<p> This is a survey that does self-explantory stuff</p>
 <p> Please answer the questions and click submit to get your recommended selections </p>
 <br>
 
 <div id="qera" class="dropdown">
-    <h4> What Era would you like to listen to (if you do not know, select Any). </h4>
+    <h4> 1. What Era would you like to listen to (if you do not know, select Any). </h4>
     <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-       Q1 (Please select your choice)
+       (Please select your choice)
      <span class="caret"></span>
     </button>
    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#" id="baroque"> Baroque </a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#" id="classical"> Classical </a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#" id="romantic"> Romantic </a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#" id="impressionism"> Impressionism </a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#" id="20thcentury"> 20th century </a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#" id="soundtrack"> Soundtrack </a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#" id="anyera"> Any </a></li>
+<li role="presentation" onclick="setBar"><a role="menuitem" tabindex="-1" href="#" id="baroque"> Baroque </a></li>
+   <li role="presentation" onclick="setClas"><a role="menuitem" tabindex="-1" href="#" id="classical"> Classical </a></li>
+   <li role="presentation" onclick="setRom"><a role="menuitem" tabindex="-1" href="#" id="romantic"> Romantic </a></li>
+   <li role="presentation" onclick="setImp"><a role="menuitem" tabindex="-1" href="#" id="impressionism"> Impressionism </a></li>
+   <li role="presentation" onclick="setTwnc"><a role="menuitem" tabindex="-1" href="#" id="20thcentury"> 20th century </a></li>
+   <li role="presentation" onclick="setSnd"><a role="menuitem" tabindex="-1" href="#" id="soundtrack"> Soundtrack </a></li>
+   <li role="presentation" onclick="setAne"><a role="menuitem" tabindex="-1" href="#" id="anyera"> Any </a></li>
    </ul>
 </div>
 
   
+ 
+
+
  <!-- <select>
   		<option> Option1 </option> 
   		<option> Option2 </option> 
@@ -66,18 +68,58 @@
   <br>
 
   <!-- For check-box question -->
-  <div class="checkbox">
-  <h3>Q2 (Drop down question) </h3>
-  <input type="checkbox" class="form-control" name = "Criteria" value="criteria1"> Critera1
+  <div id="MoodReqruitments" div class="checkbox">
+  <h4>2. What mood do you want to listen to? Select as many as you want. </h4>
+  <input type="checkbox" class="form-control" name = "MoodCriteria" id="stormybrooding"> Stormy & Brooding
   <br>
-  <input type="checkbox" class="form-control" name = "Criteria" value="criteria2"> Critera2
+  <input type="checkbox" class="form-control" name = "MoodCriteria" id="sadbittersweet"> Sad & Bittersweet
   <br>
-  <input type="checkbox" class="form-control" name = "Criteria" value="criteria3"> Critera3
+  <input type="checkbox" class="form-control" name = "MoodCriteria" id="epictriumphant"> Epic & Triumphant
   <br>
-  <input type="checkbox" class="form-control" name = "Criteria" value="criteria4"> Critera4
+  <input type="checkbox" class="form-control" name = "MoodCriteria" id="abstractdreamy"> Abstract & Dreamy
+  </div> 
+   <br>
+
+  <div id="Composers" div class="checkbox">
+      <h4> 3. Do you know or enjoy some composers already? Select any that you know that you would like to listen to. </h4>
+      <input type="checkbox" class="form-control" name = "MoodCriteria" id="nocomposers"> None
+      <br>
+      <input type="checkbox" class="form-control" name = "knowcomposers" id="beethoven"> Ludwig van Beethoven
+      <br>
+      <input type="checkbox" class="form-control" name = "MoodCriteria" id="mozart"> Wolfgang Amadeus Mozart
+      <br>
+      <input type="checkbox" class="form-control" name = "MoodCriteria" id="bach"> Johann Sebastian Bach
+      <br>
+  </div> 
    <br>
   
+  <div id="newpiece" div class="radio">
+       <h4> 4. Are you looking for new pieces of classical music?  </h4>
+       <input type="radio" style="vertical-align: middle" class="form-control" name = "newpiecepref" id="Ynewpiece"> Yes 
+       <br>
+       <input type="radio" style="vertical-align: middle" class="form-control" name = "newpiecepref" id="Nnewpiece"> No
+      <br>
+     <input type="radio" style="vertical-align: middle" class="form-control" name = "newpiecepref" id="NPnewpiece" checked> No preference
+      <br>
+</div> 
+   <br>
 
+
+   <div id="soloist" div class="radio">
+       <h4> 5. Are you interested in watching a soloist perform with the orchestra, or just an orchestral piece? </h4>
+       <input type="radio" style="vertical-align: middle" class="form-control" name = "soloistreq" id="Ynewpiece"> Yes 
+       <br>
+       <input type="radio" style="vertical-align: middle" class="form-control" name = "soloistreq" id="Nnewpiece"> No
+      <br>
+     <input type="radio" style="vertical-align: middle" class="form-control" name = "soloistreq" id="NPnewpiece" checked> No preference
+      <br>
+</div> 
+
+<br>
+<div id="soloist"> 
+ 
+ <input type="submit" class="btn btn-danger" value="Submit">
+ </div>
     <!-- For check-box question -->
     <template name="resultSubmit">
       <input type="submit" value="Submit">
@@ -94,3 +136,5 @@
   <button>Click Me</button>
   <p>You've pressed the button {{counter}} times.</p>
 </template>   -->
+
+

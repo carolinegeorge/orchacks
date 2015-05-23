@@ -4,7 +4,10 @@ body {
    /*pale red */
    background-color: #bf3838;
 } 
+.h1 {
+width: 500px;
 
+}
 #head2 {
  background-color: #000000;
  height: 100px;
@@ -14,22 +17,21 @@ body {
  padding-right: 50px;
  padding-bottom: 25px;
  padding-left: 50px;
+
 }
 
 #header-logo {
  font-family: "Times New Roman", Times, sans-serif;
- padding-top: 0px;
- padding-right: 150px;
- padding-left: 50px;
- left: 20px;
+ padding-right: 50px;
+ padding-left: 950px;
+ right: 20px;
+ top: 10px;
 }
 
 
 
 #innerbody {
-   margin: 0;
-   padding: 0;
-   padding-left: 50;
+   padding: 25px;
    margin-right: 0px;
    margin-left: 150px;
    margin-top: 0px;

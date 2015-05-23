@@ -1,0 +1,25 @@
+<!-- Results pages -->
+<!-- Shows the results from <whatever the backend file that does the search results>  -->
+
+<!-- Code/template/spacebars to load the search results --> 
+<!-- Placeholder for each result var is <  result  >,<   resultid  >, <  resultname  >  (change it if you want) -->
+<!-- (won't work until the meat is there (which will come once the data/var names are finialized) -->
+
+ <table style="width:100%">
+
+ 
+{{#each result}}
+<tr>
+    <td>
+        <div id = "entry">
+        <p><a href="/entry/{{ resultid }}/">{{  resultname  }}</a></p>
+        <p>{{  resultArtist  }}</a></p>
+        <p>{{  resultEra  }}</a></p>
+        <p>{{  resultDate  }}</a></p>
+        <p>{{  resultAdditionaltags  }}</a></p>
+    </td>
+<tr>
+{{/each }}
+
+<br>
+</table> 

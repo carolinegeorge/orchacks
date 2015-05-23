@@ -1,0 +1,39 @@
+/* CSS declarations go here */
+
+body {
+   /*pale red */
+   background-color: #bf3838;
+} 
+
+#head2 {
+ background-color: #000000;
+ height: 100px;
+ color: white;
+ font-family: "Times New Roman", Times, sans-serif;
+ padding-top: 10px;
+ padding-right: 50px;
+ padding-bottom: 25px;
+ padding-left: 50px;
+}
+
+#header-logo {
+ font-family: "Times New Roman", Times, sans-serif;
+ padding-top: 0px;
+ padding-right: 150px;
+ padding-left: 50px;
+ left: 20px;
+}
+
+
+
+#innerbody {
+   margin: 0;
+   padding: 0;
+   padding-left: 50;
+   margin-right: 0px;
+   margin-left: 150px;
+   margin-top: 0px;
+   
+   background-color: #ffffff;
+   
+} 

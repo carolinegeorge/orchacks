@@ -17,11 +17,12 @@ mood: "Sad",
 known: "No",
 soloist: "No"}]
 
-var userInputQ1 = [];
-var userInputQ2 = [];
-var userInputQ3 = [];
-var userInputQ4 = [];
-var userInputQ5 = [];
+var userInputQ1;
+var userInputQ2;
+var userInputQ3;
+var userInputQ4;
+var userInputQ5;
+
 var results = [];
 
 var inputCounter = 0;
@@ -163,9 +164,94 @@ function setAbstract() {
     abstract = false;
 }
 
+//Question 3
+
+var none = false;
+var pyotr = false;
+var beethoven = false;
+var mozart = false;
+var bach = false;
+
+function setNone(){
+    none = true;
+    pyotr = false;
+    beethoven = false;
+    mozart = false;
+    bach = false;
+}
+function setPyotr(){
+    none = false;
+    pyotr = true;
+    beethoven = false;
+    mozart = false;
+    bach = false;
+}
+function setBeethoven(){
+    none = true;
+    pyotr = false;
+    beethoven = false;
+    mozart = false;
+    bach = false;
+}
+function setMozart(){
+    none = false;
+    pyotr = false;
+    beethoven = false;
+    mozart = true;
+    bach = false;
+}
+function setBach(){
+    none = false;
+    pyotr = false;
+    beethoven = false;
+    mozart = false;
+    bach = true;
+}
 
 
+//QUESTION 4
 
+
+var Q4Yes = false;
+var Q4No = false;
+var Q4Pref = false;
+
+function setQ4Yes(){
+    Q4Yes = true;
+    Q4No = false;
+    Q4Pref = false;
+}
+function setQ4No(){
+    Q4Yes = false;
+    Q4No = true;
+    Q4Pref = false;
+}
+function setQ4Pref(){
+    Q4Yes = false;
+    Q4No = false;
+    Q4Pref = true;
+}
+
+// Question 5
+var Q5Yes = false;
+var Q5No = false;
+var Q5Pref = false;
+
+function setQ4Yes(){
+    Q5Yes = true;
+    Q5No = false;
+    Q5Pref = false;
+}
+function setQ4No(){
+    Q5Yes = false;
+    Q5No = true;
+    Q5Pref = false;
+}
+function setQ4Pref(){
+    Q4Yes = false;
+    Q4No = false;
+    Q4Pref = true;
+}
 
 // if the user chooses moods, sets input as happy, etc 
 if(stormy) {
@@ -177,39 +263,28 @@ if(stormy) {
 //if the user chooses baroque, set the input as Baroque, etc: All Question
 function submitStuff(){
     if(bar) { 
-        userInputQ1[inputCounter] = "Baroque";
-        inputCounter++;
+        userInputQ1 = "Baroque";
+    }
+    else if(clas) {
+        userInputQ1= "Classical";
+    } 
+    else if(rom) {
+        userInputQ1 = "Romantic";
+    }
+    else if(imp) {
+        userInputQ1 = "Impressionist";
+    }
+    else if(twnc) {
+        userInputQ1 = "20th Century";
+    }
+    else if(snd) {
+        userInputQ1 = "Soundtrack";
+    }
+    else if(ane) {
+        userInputQ1 = "Any";
     }
 
-    if(clas) {
-        userInputQ1[inputCounter] = "Classical";
-        inputCounter++;
-    }
 
-    if(rom) {
-        userInputQ1[inputCounter] = "Romantic";
-        inputCounter++;
-    }
-
-    if(imp) {
-        userInputQ1[inputCounter] = "Impressionist";
-        inputCounter++;
-    }
-
-    if(twnc) {
-        userInputQ1[inputCounter] = "20th Century";
-        inputCounter++;
-    }
-
-    if(snd) {
-        userInputQ1[inputCounter] = "Soundtrack";
-        inputCounter++;
-    }
-
-    if(ane) {
-        userInputQ1[inputCounter] = "Any";
-        inputCounter++;
-    }
 }
 
 // goes through q1 and looks for era

@@ -17,6 +17,8 @@ mood: "Sad",
 known: "No",
 soloist: "No"}]
 
+//DATE
+
 var userInputQ1;
 var userInputQ2;
 var userInputQ3;
@@ -336,27 +338,20 @@ function submitStuff(){
     else if(Q5Pref) {
         userInputQ5 = "Pref";
     }
-
-        
-    
-
-
 }
 
 // goes through q1 and looks for era
-for(var i = 0; i < userInputQ1.length; i++){
-  for(var q = 0; q < dict.length; q++){
-    if(dict[q].era === userInputQ1[i]){
-      results[resultCounter] = dict[q];
-      resultCounter++;
-    }
+for(var q = 0; q < dict.length; q++){
+  if(dict[q].era === userInputQ1){
+    results[resultCounter] = dict[q];
+    resultCounter++;
   }
 }
 
+
 // goes through q2 and looks for moods
-for(var i = 0; i < userInputQ2.length; i++){
-  for(var q = 0; q < dict.length; q++){
-    if(dict[q].mood === userInputQ2[i]){
+for(var q = 0; q < dict.length; q++){
+    if(dict[q].mood === userInputQ2){
       results[resultCounter] = dict[q];
       resultCounter++;
     }
@@ -364,38 +359,38 @@ for(var i = 0; i < userInputQ2.length; i++){
 }
 
 // goes through q3 and looks for answer (?)
-for(var i = 0; i < userInputQ3.length; i++){
-  for(var q = 0; q < dict.length; q++){
-    if(userInputQ3[i]){
+for(var q = 0; q < dict.length; q++){
+    if(userInputQ3 === dict[q].composer){
       results[resultCounter] = dict[q];
       resultCounter++;
     }
-  }
 }
+
 
 // goes through q4 and finds Y/N/No pref
-for(var i = 0; i < userInputQ4.length; i++){
-  for(var q = 0; q < dict.length; q++){
-    if(userInputQ4[i] == "Yes"){
-      results[resultCounter] = dict[q];
-      resultCounter++;
-    }
-  }
-}
-
-// goes through q5 and fnds Y/N/No pref
-for(var i = 0; i < userInputQ5.length; i++){
-  for(var q = 0; q < dict.length; q++){
-    if(userInputQ5[i] == "No" || ){
-    // don't do anything: keep it false
-      resultCounter++;
-    }
-    else if(userInputQ5[i] == "Yes") { 
-        soloistAvail = true;
+for(var q = 0; q < dict.length; q++){
+    if(userInputQ4 === dict[q].known){
+        results[resultCounter] = dict[q];
         resultCounter++;
     }
-    else { 
-  }
+}
+
+
+// goes through q5 and fnds Y/N/No pref
+for(var q = 0; q < dict.length; q++){
+    if(userInputQ4 === dict[q].known){
+        results[resultCounter] = dict[q];
+        resultCounter++;
+    }
+}
+
+for(var i = 0; i < results.length; i++){
+    var num = 1;
+    for(var q = i + 1; q < results.length; q++){
+        if((results[i].composer === results[q].composer) &&){
+
+        }
+    }
 }
 
 //Now we can output results.

@@ -127,22 +127,22 @@ border-radius: 0;
 
 #results table thead tr th {
   background-color: #000000;
-  font-size: 25px;
+  font-size: 22px;
+  text-align: center;
   border-right: thick double #bf3838;
-  border-bottom: dashed #000000;
   color: #ffffff;
   height:100%;
  font-family: 'Muli', sans-serif;
   height: 70px;
-  padding-left: 2%;
 
 }
 
 #results tr {
   height:100px;
-  border-bottom: dashed #bf3838;
+  border-bottom: solid, #bf3838;
   font-family: 'Muli', sans-serif;
   font-size: 15px;
+
 
 }
 

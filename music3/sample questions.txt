@@ -1,0 +1,28 @@
+Questions:
+
+1. From which of the six following musical periods, what would you like to listen to?
+   Please leave blank if you do not know.
+-> these can have snippets from youtube? 
+
+2. What mood do you want to listen to? Select as many as you want.
+- Stormy & Brooding
+- Sad & Bittersweet
+- Joyful & Cheerful
+- Epic & Triumphant
+- Abstract & Dreamy
+
+3. Do you already know or enjoy some composers? Select any that you know. 
+   Please leave blank if you do not know.
+a. No
+b. (some common guy)
+c. (some common guy) 
+.
+.
+.
+etc
+
+4. Are you looking for rather unknown pieces of classical music? 
+Y/N/No preference
+
+5. Are you interested in watching a soloist perform with the orchestra, or just an orchestral piece?
+Y/N/No preference

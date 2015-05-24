@@ -12,8 +12,11 @@
 
 
 <head>
+    <link href='http://fonts.googleapis.com/css?family=Muli:300,400' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy' rel='stylesheet' type='text/css'>
-  <title>Survey-Page 1</title>
+    
+
+  <title>Musical Recommendation Quiz</title>
 </head>
 
 <body>
@@ -29,37 +32,42 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/bootstrap-theme.min.css">
       
+      
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">  -->
   <link rel="stylesheet" type="text/css" href="css/music.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+      
 
   <div id= "head2"> 
+     
     <img src="img/kws_logo_block70.jpg" align="left">
+      
+      
     <h1> Music Selection Survey <h1>
   
   </div>
 <div id="innerbody">
 <br> 
 <br>
-<p> Please answer the questions and click submit to get your recommended selections </p>
+<h4> Please answer the questions below and click submit to get your recommended selections. </h4>
 <br>
 
-<div id="newpiece" div class="radio">
-       <h4> 1. What Era would you like to listen to (if you do not know, select Any). </h4>
-       <input type="radio" style="vertical-align: middle" class="form-control" name = "newpiecepref" id="baroque" onclick="setBar()"> Baroque 
+<div id="eraRadio" div class="radio">
+       <h4> 1. What is your favorite musical period? Select "Any" if you are unsure. </h4>
+       <input type="radio" style="vertical-align: middle" class="form-control" name = "erapref" id="baroque" onclick="setBar()"> Baroque 
        <br>
-       <input type="radio" style="vertical-align: middle" class="form-control" name = "newpiecepref" id="classical" onclick=onclick="setClas()"> Classical
+       <input type="radio" style="vertical-align: middle" class="form-control" name = "erapref" id="classical" onclick="setClas()"> Classical
       <br>
-     <input type="radio" style="vertical-align: middle" class="form-control" name = "newpiecepref" id="romantic" onclick="setRom()"> Romantic 
+     <input type="radio" style="vertical-align: middle" class="form-control" name = "erapref" id="romantic" onclick="setRom()"> Romantic 
       <br>
-      <input type="radio" style="vertical-align: middle" class="form-control" name = "newpiecepref" id="impressionism" onclick="setImp()"> Impressionism
+      <input type="radio" style="vertical-align: middle" class="form-control" name = "erapref" id="impressionism" onclick="setImp()"> Impressionism
       <br>
-      <input type="radio" style="vertical-align: middle" class="form-control" name = "newpiecepref" id="20thcentury" onclick="setTwnc()"> 20th century 
+      <input type="radio" style="vertical-align: middle" class="form-control" name = "erapref" id="20thcentury" onclick="setTwnc()"> 20th century 
       <br>
-      <input type="radio" style="vertical-align: middle" class="form-control" name = "newpiecepref" id="soundtrack" onclick="setSnd()"> Soundtrack 
+      <input type="radio" style="vertical-align: middle" class="form-control" name = "erapref" id="soundtrack" onclick="setSnd()"> Soundtrack 
       <br>
-      <input type="radio" style="vertical-align: middle" class="form-control" name = "newpiecepref" id="anyera" onclick="setAne()"> Any 
+      <input type="radio" style="vertical-align: middle" class="form-control" name = "erapref" id="anyera" onclick="setAne()"> Any 
       <br>
 </div> 
 
@@ -67,7 +75,7 @@
 
   <!-- For check-box question -->
   <div id="MoodReqruitments" div class="radio">
-  <h4>2. What mood do you want to listen to? Select one. </h4>
+  <h4>2. What mood would you like to experiene with your music? Select one. </h4>
   <input type="radio" style="vertical-align: middle" class="form-control" name = "MoodCriteria" id="stormybrooding" onclick="setStormy()"> Stormy & Brooding
   <br>
   <input type="radio" style="vertical-align: middle" class="form-control" name = "MoodCriteria" id="sadbittersweet" oneclick="setSad()"> Sad & Bittersweet
@@ -81,16 +89,16 @@
    <br>
 
   <div id="Composers" div class="radio">
-      <h4> 3. Do you know or enjoy some composers already? Select any that you know that you would like to listen to. </h4>
-      <input type="radio" style="vertical-align: middle" class="form-control" name = "MoodCriteria" id="nocomposers" onclick="setNone()"> None
+      <h4> 3. Do you know or enjoy some composers already? Select one that you would like to listen to. </h4>
+      <input type="radio" style="vertical-align: middle" class="form-control" name = "knowcomposers" id="nocomposers" onclick="setNone()"> None
       <br>
       <input type="radio" style="vertical-align: middle" class="form-control" name = "knowcomposers" id="pyotr" onclick="setPyotr()"> Pyotr Ilyich Tchaikovsky
       <br>
       <input type="radio" style="vertical-align: middle" class="form-control" name = "knowcomposers" id="beethoven" onclick="setBeethoven()"> Ludwig van Beethoven
       <br>
-      <input type="radio" style="vertical-align: middle" class="form-control" name = "MoodCriteria" id="mozart" onclick="setMozart()"> Wolfgang Amadeus Mozart
+      <input type="radio" style="vertical-align: middle" class="form-control" name = "knowcomposers" id="mozart" onclick="setMozart()"> Wolfgang Amadeus Mozart
       <br>
-      <input type="radio" style="vertical-align: middle" class="form-control" name = "MoodCriteria" id="bach" onclick="setBach()"> Johann Sebastian Bach
+      <input type="radio" style="vertical-align: middle" class="form-control" name = "knowcomposers" id="bach" onclick="setBach()"> Johann Sebastian Bach
       <br>
   </div> 
    <br>
@@ -109,16 +117,16 @@
 
    <div id="soloist" div class="radio">
        <h4> 5. Are you interested in watching a soloist perform with the orchestra, or just an orchestral piece? </h4>
-       <input type="radio" style="vertical-align: middle" class="form-control" name = "soloistreq" id="Ynewpiece" onclick="setQ5Yes()"> Yes 
+       <input type="radio" style="vertical-align: middle" class="form-control" name = "soloistreq" id="Ynewpieces" onclick="setQ5Yes()"> Yes 
        <br>
-       <input type="radio" style="vertical-align: middle" class="form-control" name = "soloistreq" id="Nnewpiece" onclick="setQ5No()"> No
+       <input type="radio" style="vertical-align: middle" class="form-control" name = "soloistreq" id="Nnewpieces" onclick="setQ5No()"> No
       <br>
-     <input type="radio" style="vertical-align: middle" class="form-control" name = "soloistreq" id="NPnewpiece" onclick="setQ5Pref()"> No preference
+     <input type="radio" style="vertical-align: middle" class="form-control" name = "soloistreq" id="NPnewpieces" onclick="setQ5Pref()"> No preference
       <br>
 </div> 
 
 <br>
-<div id="soloist"> 
+<div id="tables"> 
  
  <input type="button" class="btn btn-danger" value="Submit" onclick="submitStuff()">
  </div>

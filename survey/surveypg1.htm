@@ -16,6 +16,7 @@
 </head>
 
 <body>
+    
   <form action="#" enctype="multipart/form-data" method="post">
   <!-- For drop-down menu -->
 
@@ -26,6 +27,7 @@
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+      
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">  -->
   <link rel="stylesheet" type="text/css" href="css/music.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -118,15 +120,13 @@
 <br>
 <div id="soloist"> 
  
- <input type="submit" class="btn btn-danger" value="Submit">
+ <input type="button" class="btn btn-danger" value="Submit" onclick="submitStuff">
  </div>
-    <!-- For check-box question -->
-    <template name="resultSubmit">
-      <input type="submit" value="Submit">
-    </template>
-  <!--{{> hello}}   -->
+     <div id="results">
   </div>
+    </div>
   </form>
+<script src="music.js"></script>
 </body>
 
 

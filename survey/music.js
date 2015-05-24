@@ -492,6 +492,8 @@ function submitStuff(){
     }
 
     document.getElementById('results').appendChild(makeTable(results));
+    keyvalueDict = [];
+    results = [];
 }
 
 

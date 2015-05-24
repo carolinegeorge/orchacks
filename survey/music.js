@@ -3,19 +3,27 @@ composer: "Antonio Vivaldi's",
 era: "Baroque",
 mood: "Happy",
 known: "Yes",
-soloist: "No"},
+soloist: "No",
+id: 1},
 {name: "5th Symphony",
 composer: "Ludwig van Beethoven",
 era: "Classical",
 mood: "Assertive",
 known: "Yes",
-soloist: "No"},
+soloist: "No",
+id: 2},
 {name: "Sinfonia in D major",
 composer: "Johann Christian Bach",
 era: "Baroque",
 mood: "Sad",
 known: "No",
-soloist: "No"}]
+soloist: "No",
+id: 3}]
+
+// needed for keyvalue stuff
+var keyvalDict;
+var keyvalPosn = 0;
+
 
 //DATE
 
@@ -338,8 +346,7 @@ function submitStuff(){
     else if(Q5Pref) {
         userInputQ5 = "Pref";
     }
-}
-
+    
 // goes through q1 and looks for era
 for(var q = 0; q < dict.length; q++){
   if(dict[q].era === userInputQ1){
@@ -384,15 +391,50 @@ for(var q = 0; q < dict.length; q++){
     }
 }
 
-for(var i = 0; i < results.length; i++){
-    var num = 1;
-    for(var q = i + 1; q < results.length; q++){
-        if((results[i].composer === results[q].composer) &&){
+// to sort id's
+function idCompare(a,b) {
+  if (a.id < b.id) {
+    return -1;
+  }
+  else if (a.id > b.id) {
+    return 1;
+  }
+  else {
+  return 0;
+  }
+}
 
+// to sort by occurrence 
+function idArrayCompare(a,b) {
+  if (a[0] < b[0]) {
+    return -1;
+  }
+  else if (a[0] > b[0]) {
+    return 1;
+  }
+  else {
+  return 0;
+  }
+}
+
+
+results.sort(idCompare);
+
+// finding how many occurrences for each element
+for(var i = 0; i < results.length; i++){
+    keyvalDict[keyvalPosn][0] = 1;
+    keyvalDict[keyvalPosn][1] = results[i];
+    for(var q = i + 1; q < results.length; q++){
+        if(results[i].id === results[q].id){
+            keyvalDict[keyvalPosn][0]++;
+            i = q;
         }
     }
 }
 
-//Now we can output results.
+keyvalDict.sort(idArrayCompare);
+}
+
+//Now we can output results. Woo!!!!
 
 

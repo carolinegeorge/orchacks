@@ -15,8 +15,18 @@
 
 body {
    /*pale red */
-   background-color: #bf3838;
+   background-color: #363636;
 } 
+
+#splash-body {
+    background-color: #000000;
+    width: 70%;
+    margin: 30%;
+}
+
+#splash-body h2 {
+    background-color: #000000;
+}
 
 .h1 {
 width: 500px;

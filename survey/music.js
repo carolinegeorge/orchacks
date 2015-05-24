@@ -426,10 +426,13 @@ function submitStuff(){
           }
         }
     }
-
+    results = [];
     keyvalDict.sort(idArrayCompare);
+    for(var m = 0; m < keyvalDict.length; m++){
+        results[m] = keyvalDict[m][1];
+    }
 
-    document.getElementById('results').appendChild(makeTable(keyvalDict));
+    document.getElementById('results').appendChild(makeTable(results));
 }
 
 
@@ -437,13 +440,21 @@ function submitStuff(){
 //Now we can output results.
 function makeTable(array) {
 
+<<<<<<< HEAD
     if(array.length === 0){
         return;
     }
+=======
+    
+>>>>>>> origin/master
 
     // Create the list element:
     var table = document.createElement('table');
-
+    
+    if(array.length == 0){
+        console.log("no matches");
+        return table;
+    }
     var tableHead = document.createElement('thead');
 
     var tHeadRow = document.createElement('tr');

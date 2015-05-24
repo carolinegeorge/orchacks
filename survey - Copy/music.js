@@ -427,14 +427,10 @@ function submitStuff(){
           }
         }
     }
-    results = [];
-    keyvalDict.sort(idArrayCompare);
-    console.log(keyvalDict.length);
-    for(var m = 0; m < keyvalDict.length; m++){
-        results[m] = keyvalDict[m][1];
-    }
 
-    document.getElementById('results').appendChild(makeTable(results));
+    keyvalDict.sort(idArrayCompare);
+
+    document.getElementById('results').appendChild(makeTable(keyvalDict));
 }
 
 

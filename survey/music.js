@@ -362,8 +362,8 @@ for(var q = 0; q < dict.length; q++){
       results[resultCounter] = dict[q];
       resultCounter++;
     }
-  }
 }
+
 
 // goes through q3 and looks for answer (?)
 for(var q = 0; q < dict.length; q++){

@@ -237,20 +237,20 @@ var Q5Yes = false;
 var Q5No = false;
 var Q5Pref = false;
 
-function setQ4Yes(){
+function setQ5Yes(){
     Q5Yes = true;
     Q5No = false;
     Q5Pref = false;
 }
-function setQ4No(){
+function setQ5No(){
     Q5Yes = false;
     Q5No = true;
     Q5Pref = false;
 }
-function setQ4Pref(){
-    Q4Yes = false;
-    Q4No = false;
-    Q4Pref = true;
+function setQ5Pref(){
+    Q5Yes = false;
+    Q5No = false;
+    Q5Pref = true;
 }
 
 // if the user chooses moods, sets input as happy, etc 
@@ -262,6 +262,7 @@ if(stormy) {
 
 //if the user chooses baroque, set the input as Baroque, etc: All Question
 function submitStuff(){
+    //Q1
     if(bar) { 
         userInputQ1 = "Baroque";
     }
@@ -283,6 +284,61 @@ function submitStuff(){
     else if(ane) {
         userInputQ1 = "Any";
     }
+    //Q2
+    if(stormy) {
+        userInputQ2 = "Stormy";
+    }
+    else if(sad) {
+        userInputQ2 = "Sad";
+    }
+    else if(joyful) {
+        userInputQ2 = "Joyful";
+    }
+    else if(epic) {
+        userInputQ2 = "Epic";
+    }
+    else if(abstract) {
+        userInputQ2 = "Abstract";
+    }
+    //Q3
+    if(none) {
+        userInputQ3 = "";
+    }
+    else if(pyotr) {
+        userInputQ3 = "Pyotr Ilyich Tchaikovsky";
+    }
+    else if(beethoven) {
+        userInputQ3 = "Ludwig van Beethoven";
+    }
+    else if(mozart) {
+        userInputQ3 = "Wolfgang Amadeus Mozart";
+    }
+    else if(bach) {
+        userInputQ3 = "Johann Sebastian Bach";
+    }
+    //Q4 
+    if(Q4Yes) {
+        userInputQ4 = "Yes";
+    }
+    else if(Q4No) { 
+        userInputQ4 = "No";
+    }
+    else if(Q4Pref) {
+        userInputQ4 = "Pref";
+    }
+    //Q5
+    if(Q5Yes) {
+        userInputQ5 = "Yes";
+    }
+    else if(Q5No) {
+        userInputQ5 = "No";
+    }
+    else if(Q5Pref) {
+        userInputQ5 = "Pref";
+    }
+
+        
+    
 
 
 }

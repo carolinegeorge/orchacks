@@ -13,6 +13,7 @@
 
 <head>
   <title>Survey-Page 1</title>
+  <script src="music.js"></script>
 </head>
 
 <body>
@@ -30,6 +31,8 @@
   <link rel="stylesheet" type="text/css" href="css/music.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+ 
+  <script src="music.js"></script>
 
   <div id= "head2"> 
     <img src="img/kws_logo_block70.jpg" align="right">
@@ -65,41 +68,37 @@
 
   <!-- For check-box question -->
   <div id="MoodReqruitments" div class="checkbox">
-  <h4>2. What mood do you want to listen to? Select one. </h4>
-  <input type="checkbox" class="form-control" name = "MoodCriteria" id="stormybrooding" onclick="setStormy"> Stormy & Brooding
+  <h4>2. What mood do you want to listen to? Select as many as you want. </h4>
+  <label> <input type="checkbox" class="form-control" name = "MoodCriteria" id="stormybrooding"> Stormy & Brooding </label>
   <br>
-  <input type="checkbox" class="form-control" name = "MoodCriteria" id="sadbittersweet" oneclick="setSad"> Sad & Bittersweet
+  <label> <input type="checkbox" class="form-control" name = "MoodCriteria" id="sadbittersweet"> Sad & Bittersweet </label>
   <br>
-  <input type="checkbox" class="form-control" name = "MoodCriteria" id="cheerfuljoy" oneclick="setJoyful"> Cheerful & Joyful
+  <label> <input type="checkbox" class="form-control" name = "MoodCriteria" id="epictriumphant"> Epic & Triumphant </label>
   <br>
-  <input type="checkbox" class="form-control" name = "MoodCriteria" id="epictriumphant" onclick="setEpic"> Epic & Triumphant
-  <br>
-  <input type="checkbox" class="form-control" name = "MoodCriteria" id="abstractdreamy" onclick="setAbstract"> Abstract & Dreamy
+  <label> <input type="checkbox" class="form-control" name = "MoodCriteria" id="abstractdreamy"> Abstract & Dreamy</label>
   </div> 
    <br>
 
   <div id="Composers" div class="checkbox">
       <h4> 3. Do you know or enjoy some composers already? Select any that you know that you would like to listen to. </h4>
-      <input type="checkbox" class="form-control" name = "MoodCriteria" id="nocomposers" onclick="setNone"> None
+      <label> <input type="checkbox" class="form-control" name = "MoodCriteria" id="nocomposers"> None </label>
       <br>
-      <input type="checkbox" class="form-control" name = "knowcomposers" id="pyotr" onclick="setPyotr"> Pyotr Ilyich Tchaikovsky
+      <label> <input type="checkbox" class="form-control" name = "knowcomposers" id="beethoven"> Ludwig van Beethoven </label>
       <br>
-      <input type="checkbox" class="form-control" name = "knowcomposers" id="beethoven" onclick="setBeethoven"> Ludwig van Beethoven
+      <label> <input type="checkbox" class="form-control" name = "MoodCriteria" id="mozart"> Wolfgang Amadeus Mozart </label>
       <br>
-      <input type="checkbox" class="form-control" name = "MoodCriteria" id="mozart" onclick="setMozart"> Wolfgang Amadeus Mozart
-      <br>
-      <input type="checkbox" class="form-control" name = "MoodCriteria" id="bach" onclick="setBach"> Johann Sebastian Bach
+      <label> <input type="checkbox" class="form-control" name = "MoodCriteria" id="bach"> Johann Sebastian Bach </label>
       <br>
   </div> 
    <br>
   
   <div id="newpiece" div class="radio">
        <h4> 4. Are you looking for new pieces of classical music?  </h4>
-       <input type="radio" style="vertical-align: middle" class="form-control" name = "newpiecepref" id="Ynewpiece" onclick="setQ4Yes"> Yes 
+       <label> <input type="radio" style="vertical-align: middle" class="form-control" name = "newpiecepref" id="Ynewpiece"> Yes </label>
        <br>
-       <input type="radio" style="vertical-align: middle" class="form-control" name = "newpiecepref" id="Nnewpiece" onclick="setQ4No"> No
+       <label> <input type="radio" style="vertical-align: middle" class="form-control" name = "newpiecepref" id="Nnewpiece"> No </label>
       <br>
-     <input type="radio" style="vertical-align: middle" class="form-control" name = "newpiecepref" id="NPnewpiece" onclick="setQ4Pref"> No preference
+      <label> <input type="radio" style="vertical-align: middle" class="form-control" name = "newpiecepref" id="NPnewpiece" checked> No preference </label>
       <br>
 </div> 
    <br>
@@ -107,11 +106,11 @@
 
    <div id="soloist" div class="radio">
        <h4> 5. Are you interested in watching a soloist perform with the orchestra, or just an orchestral piece? </h4>
-       <input type="radio" style="vertical-align: middle" class="form-control" name = "soloistreq" id="Ynewpiece" onclick="setQ5Yes"> Yes 
+       <label> <input type="radio" style="vertical-align: middle" class="form-control" name = "soloistreq" id="Ynewpiece"> Yes </label>
        <br>
-       <input type="radio" style="vertical-align: middle" class="form-control" name = "soloistreq" id="Nnewpiece" onclick="setQ5Yes"> No
+       <label> <input type="radio" style="vertical-align: middle" class="form-control" name = "soloistreq" id="Nnewpiece"> No   </label>
       <br>
-     <input type="radio" style="vertical-align: middle" class="form-control" name = "soloistreq" id="NPnewpiece" onclick="setQ5Yes"> No preference
+      <label> <input type="radio" style="vertical-align: middle" class="form-control" name = "soloistreq" id="NPnewpiece" checked> No preference </label>
       <br>
 </div> 
 
@@ -120,13 +119,21 @@
  
  <input type="submit" class="btn btn-danger" value="Submit">
  </div>
+ <br>
+ <br>
+ <br>
+ <br> 
     <!-- For check-box question -->
-    <template name="resultSubmit">
-      <input type="submit" value="Submit">
-    </template>
+
+    <div id = "results"> </div>
+
   <!--{{> hello}}   -->
   </div>
   </form>
+ <script>
+ 
+  </script>
+
 </body>
 
 

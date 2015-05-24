@@ -21,7 +21,7 @@ soloist: "No",
 id: 3}]
 
 // needed for keyvalue stuff
-var keyvalDict;
+var keyvalDict = [];
 var keyvalPosn = 0;
 
 
@@ -362,7 +362,6 @@ for(var q = 0; q < dict.length; q++){
       results[resultCounter] = dict[q];
       resultCounter++;
     }
-  }
 }
 
 // goes through q3 and looks for answer (?)
@@ -406,14 +405,14 @@ function idCompare(a,b) {
 
 // to sort by occurrence 
 function idArrayCompare(a,b) {
-  if (a[0] < b[0]) {
+  if (a[0] > b[0]) {
     return -1;
   }
-  else if (a[0] > b[0]) {
+  else if (a[0] < b[0]) {
     return 1;
   }
   else {
-  return 0;
+    return 0;
   }
 }
 
@@ -422,13 +421,16 @@ results.sort(idCompare);
 
 // finding how many occurrences for each element
 for(var i = 0; i < results.length; i++){
-    keyvalDict[keyvalPosn][0] = 1;
-    keyvalDict[keyvalPosn][1] = results[i];
+    keyvalDict[keyvalPosn] = [1, results[i]];
     for(var q = i + 1; q < results.length; q++){
         if(results[i].id === results[q].id){
             keyvalDict[keyvalPosn][0]++;
             i = q;
         }
+      else {
+      	keyvalPosn++;
+        break;
+      }
     }
 }
 

@@ -429,7 +429,6 @@ function submitStuff(){
     }
     results = [];
     keyvalDict.sort(idArrayCompare);
-    console.log(keyvalDict.length);
     for(var m = 0; m < keyvalDict.length; m++){
         results[m] = keyvalDict[m][1];
     }
@@ -442,13 +441,15 @@ function submitStuff(){
 //Now we can output results.
 function makeTable(array) {
 
-    if(array.length == 0){
-        return;
-    }
+    
 
     // Create the list element:
     var table = document.createElement('table');
-
+    
+    if(array.length == 0){
+        console.log("no matches");
+        return table;
+    }
     var tableHead = document.createElement('thead');
 
     var tHeadRow = document.createElement('tr');

@@ -34,7 +34,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
   <div id= "head2"> 
-    <img src="img/kws_logo_block70.jpg" align="right">
+    <img src="img/kws_logo_block70.jpg" align="left">
     <h1> Music Selection Survey <h1>
   
   </div>
@@ -44,53 +44,52 @@
 <p> Please answer the questions and click submit to get your recommended selections </p>
 <br>
 
-<div id="qera" class="dropdown">
-    <h4> 1. What Era would you like to listen to (if you do not know, select Any). </h4>
-    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-       (Please select your choice)
-     <span class="caret"></span>
-    </button>
-   <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-<li role="presentation" onclick="setBar()"><a role="menuitem" tabindex="-1" href="#" id="baroque"> Baroque </a></li>
-   <li role="presentation" onclick="setClas()"><a role="menuitem" tabindex="-1" href="#" id="classical"> Classical </a></li>
-   <li role="presentation" onclick="setRom()"><a role="menuitem" tabindex="-1" href="#" id="romantic"> Romantic </a></li>
-   <li role="presentation" onclick="setImp()"><a role="menuitem" tabindex="-1" href="#" id="impressionism"> Impressionism </a></li>
-   <li role="presentation" onclick="setTwnc()"><a role="menuitem" tabindex="-1" href="#" id="20thcentury"> 20th century </a></li>
-   <li role="presentation" onclick="setSnd()"><a role="menuitem" tabindex="-1" href="#" id="soundtrack"> Soundtrack </a></li>
-   <li role="presentation" onclick="setAne()"><a role="menuitem" tabindex="-1" href="#" id="anyera"> Any </a></li>
-   </ul>
-</div>
-
-  
+<div id="newpiece" div class="radio">
+       <h4> 1. What Era would you like to listen to (if you do not know, select Any). </h4>
+       <input type="radio" style="vertical-align: middle" class="form-control" name = "newpiecepref" id="baroque" onclick="setBar()"> Baroque 
+       <br>
+       <input type="radio" style="vertical-align: middle" class="form-control" name = "newpiecepref" id="classical" onclick=onclick="setClas()"> Classical
+      <br>
+     <input type="radio" style="vertical-align: middle" class="form-control" name = "newpiecepref" id="romantic" onclick="setRom()"> Romantic 
+      <br>
+      <input type="radio" style="vertical-align: middle" class="form-control" name = "newpiecepref" id="impressionism" onclick="setImp()"> Impressionism
+      <br>
+      <input type="radio" style="vertical-align: middle" class="form-control" name = "newpiecepref" id="20thcentury" onclick="setTwnc()"> 20th century 
+      <br>
+      <input type="radio" style="vertical-align: middle" class="form-control" name = "newpiecepref" id="soundtrack" onclick="setSnd()"> Soundtrack 
+      <br>
+      <input type="radio" style="vertical-align: middle" class="form-control" name = "newpiecepref" id="anyera" onclick="setAne()"> Any 
+      <br>
+</div> 
 
   <br>
 
   <!-- For check-box question -->
-  <div id="MoodReqruitments" div class="checkbox">
+  <div id="MoodReqruitments" div class="radio">
   <h4>2. What mood do you want to listen to? Select one. </h4>
-  <input type="checkbox" class="form-control" name = "MoodCriteria" id="stormybrooding" onclick="setStormy()"> Stormy & Brooding
+  <input type="radio" style="vertical-align: middle" class="form-control" name = "MoodCriteria" id="stormybrooding" onclick="setStormy()"> Stormy & Brooding
   <br>
-  <input type="checkbox" class="form-control" name = "MoodCriteria" id="sadbittersweet" oneclick="setSad()"> Sad & Bittersweet
+  <input type="radio" style="vertical-align: middle" class="form-control" name = "MoodCriteria" id="sadbittersweet" oneclick="setSad()"> Sad & Bittersweet
   <br>
-  <input type="checkbox" class="form-control" name = "MoodCriteria" id="cheerfuljoy" oneclick="setJoyful()"> Cheerful & Joyful
+  <input type="radio" style="vertical-align: middle" class="form-control" name = "MoodCriteria" id="cheerfuljoy" oneclick="setJoyful()"> Cheerful & Joyful
   <br>
-  <input type="checkbox" class="form-control" name = "MoodCriteria" id="epictriumphant" onclick="setEpic()"> Epic & Triumphant
+  <input type="radio" style="vertical-align: middle" class="form-control" name = "MoodCriteria" id="epictriumphant" onclick="setEpic()"> Epic & Triumphant
   <br>
-  <input type="checkbox" class="form-control" name = "MoodCriteria" id="abstractdreamy" onclick="setAbstract()"> Abstract & Dreamy
+  <input type="radio" style="vertical-align: middle" class="form-control" name = "MoodCriteria" id="abstractdreamy" onclick="setAbstract()"> Abstract & Dreamy
   </div> 
    <br>
 
-  <div id="Composers" div class="checkbox">
+  <div id="Composers" div class="radio">
       <h4> 3. Do you know or enjoy some composers already? Select any that you know that you would like to listen to. </h4>
-      <input type="checkbox" class="form-control" name = "MoodCriteria" id="nocomposers" onclick="setNone()"> None
+      <input type="radio" style="vertical-align: middle" class="form-control" name = "MoodCriteria" id="nocomposers" onclick="setNone()"> None
       <br>
-      <input type="checkbox" class="form-control" name = "knowcomposers" id="pyotr" onclick="setPyotr()"> Pyotr Ilyich Tchaikovsky
+      <input type="radio" style="vertical-align: middle" class="form-control" name = "knowcomposers" id="pyotr" onclick="setPyotr()"> Pyotr Ilyich Tchaikovsky
       <br>
-      <input type="checkbox" class="form-control" name = "knowcomposers" id="beethoven" onclick="setBeethoven()"> Ludwig van Beethoven
+      <input type="radio" style="vertical-align: middle" class="form-control" name = "knowcomposers" id="beethoven" onclick="setBeethoven()"> Ludwig van Beethoven
       <br>
-      <input type="checkbox" class="form-control" name = "MoodCriteria" id="mozart" onclick="setMozart()"> Wolfgang Amadeus Mozart
+      <input type="radio" style="vertical-align: middle" class="form-control" name = "MoodCriteria" id="mozart" onclick="setMozart()"> Wolfgang Amadeus Mozart
       <br>
-      <input type="checkbox" class="form-control" name = "MoodCriteria" id="bach" onclick="setBach()"> Johann Sebastian Bach
+      <input type="radio" style="vertical-align: middle" class="form-control" name = "MoodCriteria" id="bach" onclick="setBach()"> Johann Sebastian Bach
       <br>
   </div> 
    <br>

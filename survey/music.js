@@ -230,7 +230,6 @@ function setQ4Yes(){
     Q4Yes = true;
     Q4No = false;
     Q4Pref = false;
-    console.log(Q4Yes);
 }
 function setQ4No(){
     Q4Yes = false;
@@ -438,7 +437,7 @@ function submitStuff(){
 //Now we can output results.
 function makeTable(array) {
 
-    if(array.length == 0){
+    if(array.length === 0){
         return;
     }
 

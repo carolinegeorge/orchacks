@@ -3,19 +3,29 @@ composer: "Antonio Vivaldi's",
 era: "Baroque",
 mood: "Happy",
 known: "Yes",
-soloist: "No"},
+soloist: "No",
+id: 1},
 {name: "5th Symphony",
 composer: "Ludwig van Beethoven",
 era: "Classical",
 mood: "Assertive",
 known: "Yes",
-soloist: "No"},
+soloist: "No",
+id: 2},
 {name: "Sinfonia in D major",
 composer: "Johann Christian Bach",
 era: "Baroque",
 mood: "Sad",
 known: "No",
-soloist: "No"}]
+soloist: "No",
+id: 3}]
+
+// needed for keyvalue stuff
+var keyvalDict = [];
+var keyvalPosn = 0;
+
+
+//DATE
 
 var userInputQ1;
 var userInputQ2;
@@ -336,68 +346,97 @@ function submitStuff(){
     else if(Q5Pref) {
         userInputQ5 = "Pref";
     }
-
-        
     
-
-
-}
-
 // goes through q1 and looks for era
-for(var i = 0; i < userInputQ1.length; i++){
-  for(var q = 0; q < dict.length; q++){
-    if(dict[q].era === userInputQ1[i]){
-      results[resultCounter] = dict[q];
-      resultCounter++;
-    }
+for(var q = 0; q < dict.length; q++){
+  if(dict[q].era === userInputQ1){
+    results[resultCounter] = dict[q];
+    resultCounter++;
   }
 }
+
 
 // goes through q2 and looks for moods
-for(var i = 0; i < userInputQ2.length; i++){
-  for(var q = 0; q < dict.length; q++){
-    if(dict[q].mood === userInputQ2[i]){
+for(var q = 0; q < dict.length; q++){
+    if(dict[q].mood === userInputQ2){
       results[resultCounter] = dict[q];
       resultCounter++;
     }
-  }
 }
 
 // goes through q3 and looks for answer (?)
-for(var i = 0; i < userInputQ3.length; i++){
-  for(var q = 0; q < dict.length; q++){
-    if(userInputQ3[i]){
+for(var q = 0; q < dict.length; q++){
+    if(userInputQ3 === dict[q].composer){
       results[resultCounter] = dict[q];
       resultCounter++;
     }
-  }
 }
+
 
 // goes through q4 and finds Y/N/No pref
-for(var i = 0; i < userInputQ4.length; i++){
-  for(var q = 0; q < dict.length; q++){
-    if(userInputQ4[i] == "Yes"){
-      results[resultCounter] = dict[q];
-      resultCounter++;
-    }
-  }
-}
-
-// goes through q5 and fnds Y/N/No pref
-for(var i = 0; i < userInputQ5.length; i++){
-  for(var q = 0; q < dict.length; q++){
-    if(userInputQ5[i] == "No" || ){
-    // don't do anything: keep it false
-      resultCounter++;
-    }
-    else if(userInputQ5[i] == "Yes") { 
-        soloistAvail = true;
+for(var q = 0; q < dict.length; q++){
+    if(userInputQ4 === dict[q].known){
+        results[resultCounter] = dict[q];
         resultCounter++;
     }
-    else { 
+}
+
+
+// goes through q5 and fnds Y/N/No pref
+for(var q = 0; q < dict.length; q++){
+    if(userInputQ4 === dict[q].known){
+        results[resultCounter] = dict[q];
+        resultCounter++;
+    }
+}
+
+// to sort id's
+function idCompare(a,b) {
+  if (a.id < b.id) {
+    return -1;
+  }
+  else if (a.id > b.id) {
+    return 1;
+  }
+  else {
+  return 0;
   }
 }
 
-//Now we can output results.
+// to sort by occurrence 
+function idArrayCompare(a,b) {
+  if (a[0] > b[0]) {
+    return -1;
+  }
+  else if (a[0] < b[0]) {
+    return 1;
+  }
+  else {
+    return 0;
+  }
+}
+
+
+results.sort(idCompare);
+
+// finding how many occurrences for each element
+for(var i = 0; i < results.length; i++){
+    keyvalDict[keyvalPosn] = [1, results[i]];
+    for(var q = i + 1; q < results.length; q++){
+        if(results[i].id === results[q].id){
+            keyvalDict[keyvalPosn][0]++;
+            i = q;
+        }
+      else {
+      	keyvalPosn++;
+        break;
+      }
+    }
+}
+
+keyvalDict.sort(idArrayCompare);
+}
+
+//Now we can output results. Woo!!!!
 
 

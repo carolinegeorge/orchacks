@@ -9,7 +9,7 @@ body {
  background-color: #000000;
  height: 100px;
  color: white;
- font-family: "Times New Roman", Times, sans-serif;
+ font-family:'Muli', sans-serif;
  padding-top: 10px;
  padding-right: 50px;
  padding-bottom: 25px;
@@ -17,7 +17,7 @@ body {
 }
 
 #header-logo {
- font-family: "Times New Roman", Times, sans-serif;
+ font-family:'Muli', sans-serif;
  padding-top: 0px;
  padding-right: 150px;
  padding-left: 50px;

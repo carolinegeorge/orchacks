@@ -440,14 +440,6 @@ function submitStuff(){
 //Now we can output results.
 function makeTable(array) {
 
-<<<<<<< HEAD
-    if(array.length === 0){
-        return;
-    }
-=======
-    
->>>>>>> origin/master
-
     // Create the list element:
     var table = document.createElement('table');
     
